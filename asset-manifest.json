@@ -1,11 +1,11 @@
 {
-  "main.js": "/productivity-app/static/js/main.ff9d355a.chunk.js",
-  "main.js.map": "/productivity-app/static/js/main.ff9d355a.chunk.js.map",
+  "main.js": "/productivity-app/static/js/main.bf6844e1.chunk.js",
+  "main.js.map": "/productivity-app/static/js/main.bf6844e1.chunk.js.map",
   "runtime~main.js": "/productivity-app/static/js/runtime~main.5ebbdb93.js",
   "runtime~main.js.map": "/productivity-app/static/js/runtime~main.5ebbdb93.js.map",
   "static/js/2.d7b74634.chunk.js": "/productivity-app/static/js/2.d7b74634.chunk.js",
   "static/js/2.d7b74634.chunk.js.map": "/productivity-app/static/js/2.d7b74634.chunk.js.map",
   "index.html": "/productivity-app/index.html",
-  "precache-manifest.18483bcbd0d2935544e143cf2a68e33c.js": "/productivity-app/precache-manifest.18483bcbd0d2935544e143cf2a68e33c.js",
+  "precache-manifest.6bdfa7086c33dfb8d1c103d7cb9ff35d.js": "/productivity-app/precache-manifest.6bdfa7086c33dfb8d1c103d7cb9ff35d.js",
   "service-worker.js": "/productivity-app/service-worker.js"
 }
