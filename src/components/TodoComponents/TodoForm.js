@@ -12,7 +12,7 @@ const TodoForm = props => {
       <button
         onClick={props.addTask}>Add a Task</button>
       <button onClick={props.removeItems}>Remove Completed</button>
-    </form>
+      </form>
   )
 }
 

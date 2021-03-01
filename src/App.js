@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import TodoList from './components/TodoComponents/TodoList';
 import TodoForm from './components/TodoComponents/TodoForm';
 import Pomodoro from './components/TimerComponents/Pomodoro';
+import Confetti from 'react-confetti';
+import ShowConfetti from './components/ShowConfetti/ShowConfetti';
 
 
 class App extends Component {
@@ -58,6 +60,7 @@ class App extends Component {
       localStorage.setItem(key, JSON.stringify(this.state[key]))
     }
   }
+ 
 
   inputChangeHandler = event => {
     this.setState({[event.target.name]: event.target.value})
@@ -76,6 +79,7 @@ class App extends Component {
     })
   }
 
+
 toggleComplete = itemId => {
   const todos = this.state.todos.map(todo => {
     if (todo.id === itemId) {
@@ -90,13 +94,21 @@ removeItems = event => {
   event.preventDefault();
   this.setState(prevState => {
     return {
-      todos: prevState.todos.filter(todo => {
+        todos: prevState.todos.filter(todo => {
         return !todo.completed;
       })
     }
   })
+
 }
 
+/*showConfetti =()=>{
+return(    <Confetti
+  width='200'
+  height='200'
+/>)
+ }
+*/
 timer = () => {
   this.setState({
     seconds: this.state.seconds === 0 ? 59 : this.state.seconds - 1
@@ -137,6 +149,8 @@ pauseTimer = () => {
 }
 
   render() {
+
+       
     return (
       <div className="App">
         <h1>To-Do List</h1>
@@ -148,7 +162,7 @@ pauseTimer = () => {
           value={this.state.todo}
           inputChangeHandler={this.inputChangeHandler}
           addTask={this.addTask}
-          removeItems={this.removeItems}/>
+          removeItems={this.removeItems} />
         <Pomodoro
           timer={this.timer}
           workMinutes={this.state.workMinutes}
@@ -158,7 +172,11 @@ pauseTimer = () => {
           break={this.state.break}
           startTimer={this.startTimer}
           pauseTimer={this.pauseTimer}/>
-      </div>
+
+          <ShowConfetti 
+          list={this.state.todos.length}/>
+       
+        </div>
     );
   }
 }
